@@ -514,7 +514,7 @@ if __name__ == '__main__':
     parser.add_argument('--bbox_interval', type=int, default=-1, help='Set bounding-box image logging interval for W&B')
     parser.add_argument('--save_period', type=int, default=-1, help='Log model after every "save_period" epoch')
     parser.add_argument('--artifact_alias', type=str, default="latest", help='version of dataset artifact to be used')
-    parser.add_argument('--one-channel-extractor', type=str, default="extract_red", help='how to extract the single channel image')  # noqa
+    parser.add_argument('--one-channel-extractor', type=str, default="extract_saturation", help='how to extract the single channel image')  # noqa
     opt = parser.parse_args()
 
     # Set DDP variables

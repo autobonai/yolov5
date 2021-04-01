@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 
 def extract_red(frame):
@@ -11,7 +12,7 @@ def extract_blue(frame):
     return _extract_one_idx(frame, 0)
 
 def extract_gray(frame):
-    return cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    return cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)[..., np.newaxis]
 
 def extract_hue(frame):
     return _extract_one_idx(cv2.cvtColor(frame, cv2.COLOR_BGR2HSV), 0)
